@@ -1,7 +1,5 @@
-import { useRef } from "react"
-import './App.css';
-import ScrollToTop from "./components/ScrollToTop";
-
+{\rtf1}
+SCROLL SECTION
 function App() {
   const services = useRef(null)
   const blog = useRef(null)
@@ -13,17 +11,13 @@ const scrollToSection = (elementRef) => {
     behavior: 'smooth',
   })
 }
-
   return (
-    <div className="App">
-    <ScrollToTop />
-      <div className='hero'>
-        <ul>
+    <ul>
           <li onClick={() => scrollToSection(services)} className="link">Services</li>
           <li onClick={() => scrollToSection(blog)} className="link">Blog</li>
           <li onClick={() => scrollToSection(contact)} className="link">Contact</li>
-        </ul>
-      </div>
+    </ul>
+
       <div ref={services} className='services'>
         <h3>Services</h3>
       </div>
@@ -33,8 +27,3 @@ const scrollToSection = (elementRef) => {
       <div ref={contact} className='contact'>
         <h3>Contact</h3>
       </div>
-    </div>
-  );
-}
-
-export default App;
